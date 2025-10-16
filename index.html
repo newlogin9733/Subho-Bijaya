@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শুভ বিজয়ার আমন্ত্রণ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Tiro+Bangla&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the Bengali font and animations */
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+
+        .font-bengali {
+            font-family: 'Tiro Bangla', serif;
+        }
+        
+        /* Blinking cursor animation */
+        .blinking-cursor {
+            font-weight: 100;
+            font-size: 2.5rem; /* Match with h1 font size */
+            color: #f59e0b;
+            -webkit-animation: 1s blink step-end infinite;
+            -moz-animation: 1s blink step-end infinite;
+            -ms-animation: 1s blink step-end infinite;
+            -o-animation: 1s blink step-end infinite;
+            animation: 1s blink step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to {
+                color: transparent;
+            }
+            50% {
+                color: #f59e0b;
+            }
+        }
+
+        /* Pulsating animation for the Rangoli */
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 20px rgba(255, 193, 7, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-hidden">
+
+    <!-- Entry Screen with Rangoli -->
+    <div id="entry-screen" class="fixed inset-0 z-20 flex flex-col items-center justify-center bg-gradient-to-br from-red-900 via-gray-900 to-black transition-opacity duration-1000">
+        <h2 class="text-3xl md:text-5xl font-bold text-amber-300 mb-4 font-bengali">শুভ বিজয়া</h2>
+        <div id="rangoli-container" class="cursor-pointer rounded-full p-2 pulse-animation">
+            <!-- Simple and elegant Rangoli SVG -->
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="90" fill="#831843"/>
+                <circle cx="100" cy="100" r="75" fill="#fde047"/>
+                <path d="M100 20 L140 60 L100 100 L60 60 Z" fill="#dc2626"/>
+                <path d="M100 180 L140 140 L100 100 L60 140 Z" fill="#dc2626"/>
+                <path d="M20 100 L60 140 L100 100 L60 60 Z" fill="#dc2626"/>
+                <path d="M180 100 L140 140 L100 100 L140 60 Z" fill="#dc2626"/>
+                <circle cx="100" cy="100" r="40" fill="#f97316"/>
+                <circle cx="100" cy="100" r="20" fill="#fefce8"/>
+            </svg>
+        </div>
+        <p class="mt-8 text-xl text-yellow-200 animate-pulse font-bengali">প্রবেশ করতে রঙ্গোলি স্পর্শ করুন</p>
+    </div>
+
+    <!-- Main Invitation Content -->
+    <div id="main-content" class="hidden min-h-screen w-full flex flex-col items-center justify-center p-4 bg-gradient-to-t from-orange-900 via-rose-900 to-black">
+        <div class="w-full max-w-2xl text-center flex flex-col items-center">
+
+            <!-- Veg Dish Photo -->
+            <div class="mb-6">
+                <img src="https://images.pexels.com/photos/9609835/pexels-photo-9609835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                     alt="Veg Dish" 
+                     class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full border-4 border-amber-400 shadow-xl shadow-orange-500/30"
+                     onerror="this.onerror=null;this.src='https://placehold.co/256x256/1e1b4b/fde047?text=Veg+Dish';">
+            </div>
+
+            <!-- Dynamic Invitation Text -->
+            <div class="h-24 md:h-32">
+                <h1 id="invitation-text" class="text-3xl md:text-4xl text-yellow-200 font-bengali leading-relaxed"></h1><span id="cursor" class="blinking-cursor">|</span>
+            </div>
+
+            <!-- Footer Section -->
+            <div class="mt-10 border-t border-amber-500/30 w-full pt-6">
+                <p class="text-lg text-rose-200 mb-4 font-bengali">তৈরি করেছেন "King"</p>
+
+                <!-- Social Media Links -->
+                <div class="flex items-center justify-center space-x-6">
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
+                        <!-- Instagram Icon -->
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C8.74 2 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.784.305-1.455.717-2.126 1.388S.935 3.356.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.784.718 1.455 1.388 2.126s1.342.935 2.126 1.388c.765.297 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.784-.305 1.455-.718 2.126-1.388s.935-1.342 1.388-2.126c.297-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.148-.558-2.913-.305-.784-.718-1.455-1.388-2.126S20.644.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.163c3.204 0 3.584.012 4.85.07 1.17.053 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.82.896 1.381.164.422.36 1.057.413 2.227.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.053 1.17-.249 1.805-.413 2.227-.217.562-.477.96-.896 1.382-.42.419-.82.679-1.381.896-.422.164-1.057.36-2.227.413-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.053-1.805-.249-2.227-.413-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.82-.896-1.381-.164-.422-.36-1.057-.413-2.227-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.053-1.17.249-1.805.413-2.227.217-.562.477.96.896-1.382.42-.419.82-.679 1.381-.896.422-.164 1.057.36 2.227-.413 1.266-.058 1.646-.07 4.85-.07zM12 6.87c-2.761 0-5 2.239-5 5s2.239 5 5 5 5-2.239 5-5-2.239-5-5-5zm0 8.132c-1.701 0-3.071-1.369-3.071-3.071S10.299 8.929 12 8.929s3.071 1.369 3.071 3.071-1.37 3.071-3.071 3.071zm5.235-7.819c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z" clip-rule="evenodd" /></svg>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
+                        <!-- Telegram Icon -->
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0C5.356 0 0 5.356 0 11.944s5.356 11.944 11.944 11.944 11.944-5.356 11.944-11.944S18.532 0 11.944 0zm5.49 6.239l-1.43 6.742c-.156.736-.56 1.01-1.14.624l-2.18-1.602-1.056 1.018c-.117.117-.21.21-.402.21s-.284-.093-.402-.21l.21-2.22 3.86-3.483c.175-.156-.058-.242-.31-.093L8.103 13.06l-2.13-1.018c-.71-.233-.71-.735.137-1.018l8.918-3.483c.602-.233 1.03.156.864.9z"/></svg>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
+                        <!-- Facebook Icon -->
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const entryScreen = document.getElementById('entry-screen');
+            const mainContent = document.getElementById('main-content');
+            const rangoli = document.getElementById('rangoli-container');
+
+            const invitationTextElement = document.getElementById('invitation-text');
+            const cursor = document.getElementById('cursor');
+            // Text for the invitation
+            const fullText = "আমন্ত্রণ রইলো। সবাই এসো আগামীকাল সন্ধ্যা ৭ টায়।";
+            let charIndex = 0;
+
+            // Function to type out the text
+            function typeText() {
+                if (charIndex < fullText.length) {
+                    invitationTextElement.textContent += fullText.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeText, 150); // Speed of typing
+                } else {
+                    // Hide cursor after typing is complete
+                    cursor.style.display = 'none';
+                }
+            }
+
+            // Event listener for clicking the Rangoli
+            rangoli.addEventListener('click', () => {
+                // Fade out entry screen
+                entryScreen.style.opacity = '0';
+
+                // After fade out, hide it and show main content
+                setTimeout(() => {
+                    entryScreen.style.display = 'none';
+                    mainContent.classList.remove('hidden');
+                    // Start the typing animation
+                    setTimeout(typeText, 500); // Small delay before typing starts
+                }, 1000); // Match this with the transition duration
+            });
+        });
+    </script>
+
+</body>
+</html>
+
